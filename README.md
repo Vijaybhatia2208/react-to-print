@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+Create clean pdf using react-to-print npm package 
+To generate a PDF from a React component using the react-to-print npm package, you'll need to set up a few things. Below is a detailed guide on how to do this, including setting up your project, installing the necessary packages, and writing the code for the functional React component. By following these steps, you can create professional and clean PDFs directly from your React application without worrying about alignment issues that often plague other methods like jsPDF and html2canvas.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Creating React app
+2. Installing neccessary npm packages 
+  npm install react-icons react-to-print
 
-## Available Scripts
+3. Folder Structure
+5. Your index.js will look like this.
+6. We define the styles in index.css to ensure the printed content looks good and we ensure the printed output looks professional and control the exact size and format of the generated PDF. Here @page css we are adjusting height and width of the pdf generated .
 
-In the project directory, you can run:
+/* index.css */
 
-### `npm start`
+7. This section of the code in App.js focuses on two things:
+Resume Template: It defines the structure and layout of your resume content.
+PDF Generation: It uses the useReactToPrint hook from the react-to-print library to create a PDF document from the resume template. The generatePDF function handles this process and utilizes a reference (contentToPrint) created with the useRef hook to capture the resume content.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+//App.js
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+export default App;
+8. The styles specific to the App.js component are defined in the App.css file.
+/* App.css */
 
-### `npm test`
+9. After finalizing the code setup, navigate to the VS Code terminal and run this commands :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+cd react-to-print
+npm start
 
-### `npm run build`
+10. Once you run the command, open your web browser and visit http://localhost:3000 to see your application.
+11. When you click on the print button you will get preview of pdf and you can there click on save button to save pdf in your local storage.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In this guide, we've walked through the process of generating a PDF from a React component using the react-to-print npm package.
+Using react-to-print offers several advantages:
+1. Simplicity: The setup is straightforward and leverages React's component-based architecture.
+2. Accuracy: It renders the PDF exactly as it appears in your browser, ensuring consistent styling and layout.
+3. Customization: You have full control over the CSS, making it easy to design and tweak the appearance of your printable content.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Whether you're creating resumes, invoices, reports, or any other printable documents, react-to-print provides a reliable and efficient solution. Give it a try in your next project and enjoy the seamless experience of generating high-quality PDFs directly from your React application.
+Feel free to explore the react-to-print documentation for more advanced features and customization options.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy coding!
